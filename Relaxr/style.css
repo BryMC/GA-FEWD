@@ -16,6 +16,11 @@ h1 {
 	font-weight:bold;
 	font-style: normal;
 }
+div { box-sizing: border-box;
+	 width: 100%;
+	 padding:50px;
+	 border: 10px solid black;
+	}
 h2 { 
 	font-size:20px;
 	color:gray;
