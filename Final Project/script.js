@@ -1,8 +1,63 @@
 $(document).ready(function() {
-	var catalogue = ['anthropology', 'architecture', 'art', 'art history', 'biochemistry', 'biology', 'business','chemistry', 'chinese', 'classics', 'communications', 'computer science', 'economics', 'education', 'english', 'environmental studies', 'feminist studies', 'french', 'german', 'greek','history','international studies', 'kinesiology','latin','mathematics','music','philosophy','physics','political science','psychology','religion','sociology','spanish','theatre'];
-	catalogue[15];
-}
+    var faculty = {
+		"Selbin":{
+			courses:['Intro to Political Science', 'Marxism'],
+			departments:['Political Science', 'Latin American and Border Studies'],
+			clusters:['Mediterranean Mingling', 'Presence of the Past']
+		}, 
+		"Costola":{
+			courses:['Theatre History', 'East Meets West', 'Play Analysis'],
+			departments:['Theatre'],
+			clusters:['Mediterranean Mingling', 'Conflict', 'Investigating Identity']
+		},
+        
+	};
+	var departments = {
+		"Theatre":{
+			faculty:["Costola", "Bechtel", "Gaffney", "Roemer", "Roybal"],
+			clusters:["Design", "Conflict", "Mediterranean Mingling"],
+			courses:["Introduction to Acting", "Introduction to Movement", "Play Analysis"]
+
+		}
+	};
+
+	$('#main_form').submit(function(){ 
+		event.preventDefault();
+
+		var prof_in = $('#prof').val();
+		if(prof_in != ""){
+			if(faculty[prof_in]){
+				var prof = faculty[prof_in];
+				console.log(prof.courses);
+				$('#return_display').text(JSON.stringify(prof));
+			}
+		}
+	});
+	$('#dept_form').submit(function(){ 
+		event.preventDefault();
+
+		var dept_in = $('#dept').val();
+		if(dept_in != ""){
+			if(departments[dept_in]){
+				var dept = departments[dept_in];
+				console.log(dept.faculty);
+				$('#return_display').text(JSON.stringify(dept));
+			}
+		}
+	});
+
+
+
+
+
+	
 });
+
+// var departments = ['Anthropology', 'Architecture', 'Art', 'Art History', 'Biochemistry', 'Biology', 'Business','Chemistry', 'Chinese', 'Classics', 'Communications', 'Computer Science', 'Economics', 'Education', 'English', 'Environmental Studies', 'Feminist Studies', 'French', 'German', 'Greek','History','International Studies', 'Kinesiology','Latin','Mathematics','Music','Philosophy','Physics','Political Science','Psychology','Religion','Sociology','Spanish','Theatre'];
+// 	var professors =['Selbin', 'Costola', 'Ross', 'Adrian', 'Crockett', 'Olson'];
+// 	var costola = ['east meets west', 'theatre history', 'introduction to playwriting', 'introduction to play analysis'];
+// 	var courses = ['theatre', 'costola', 'mediterranean mingling', 'design'];
+	// var clusters = ['ross', 'mclean', 'consumer behavior', 'introduction to psychology','neuroscience'];
 	//$('#button').click('begin');
 	//user clicks one input
 	//or 

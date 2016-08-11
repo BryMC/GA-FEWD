@@ -144,7 +144,7 @@ header h2{
   background:#333;
 }
 .container{
-  max-width:960spx;
+  max-width:960px;
   margin:0 auto;
 }
 #hero{
@@ -179,6 +179,25 @@ h2 {
 .col_cat{
   width:33.3%;
   display:inline-block;
-  padding:5px;
+  padding:20px;
   box-sizing:border-box;
+  font-style:sans-serif;
+  font-size:20px;
+}
+#main_form{
+	background:black;
+	color:white;
+	padding-top:40px;
+	padding-bottom:20px;
+	padding-right:10px;
+	padding-left:10px;
+	display:inline-block;
+}
+input{
+	padding:10px;
+	margin:0 10px;
+	margin-bottom:10px;
+}
+.cluster_font li{
+	font-style:serif;
 }
